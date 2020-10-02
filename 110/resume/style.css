@@ -1,0 +1,78 @@
+/* Basic Styling for the whole page */
+html {
+  width: 50vw;
+  font-size: 1vw;
+  margin: 20px auto;
+  font-family: Epilogue, sans-serif;
+  background-color: #EAEAEA;
+  color: #264653;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC
+}
+
+/* Make it a little bigger on narrow windows */
+@media(max-width: 50em) {
+  html {
+    width: 90vw;
+    font-size: 1.5vw;
+  }
+}
+/* Basic text and border stuff */
+h1 {
+  font-size: 3rem;
+  border-bottom: 10px groove #e76f51;
+  border-style:
+}
+
+h2 {
+  border-bottom: 4px solid #e76f51;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size:1.5rem;
+}
+
+h3 + p {
+  font-size: 1.3rem;
+}
+/* some more specific borders and spacing */
+.job {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #e76f51;
+}
+
+
+.job:last-of-type {
+  border: none;
+}
+/* Image border, positions image and adress to be next to each other */
+img {
+  width: 40%;
+  border: 5px solid #e76f51;
+  border-radius: 30px;
+  float: left;
+}
+
+address {
+  text-align: right;
+  font-style: normal;
+  font-size: 1.5rem;
+  float: right;
+}
+/* pretty up those links */
+a:link, a:visited {
+  color: #2a9d8f;
+}
+
+a:hover, a:visited:hover {
+  color: #e9c46a;
+}
+
+a:active, a:visited:active {
+  color: #f4a261;
+}
+/* wrap the div around the image and address so other elements don't rush into their space */
+#top {
+  overflow: hidden;
+}
