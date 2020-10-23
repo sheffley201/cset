@@ -1,7 +1,8 @@
 /* Basic Styling for the whole page */
 html {
-  width: 50vw;
-  font-size: 1vw;
+  width: 90vw;
+  max-width: 800px;
+  font-size: 15px;
   margin: 20px auto;
   font-family: Epilogue, sans-serif;
   background-color: #EAEAEA;
@@ -10,14 +11,22 @@ html {
   border-right: 1px solid #CCC;
   text-shadow: 1px 1px 2px grey;
 }
-
-/* Make it a little bigger on narrow windows */
-@media(max-width: 50em) {
-  html {
-    width: 90vw;
-    font-size: 1.5vw;
-  }
+body {
+  display: flex;
+  flex-direction: column;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #EAEAEA;
+}
+
+nav a {
+  margin: 0 5px;
+}
+
 /* Basic text and border stuff */
 h1 {
   font-size: 3rem;
@@ -52,15 +61,13 @@ img {
   width: 40%;
   border: 5px solid #e76f51;
   border-radius: 30px;
-  float: left;
 }
 
 address {
-  text-align: right;
   font-style: normal;
   font-size: 1.5rem;
-  float: right;
 }
+
 /* pretty up those links */
 a:link, a:visited {
   color: #2a9d8f;
@@ -73,7 +80,27 @@ a:hover, a:visited:hover {
 a:active, a:visited:active {
   color: #f4a261;
 }
-/* wrap the div around the image and address so other elements don't rush into their space */
-#top {
-  overflow: hidden;
+
+@media only screen and (min-width: 550px) {
+  #top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  address {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    flex-direction: row;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav a {
+    margin: 10px 5px;
+  }
 }
