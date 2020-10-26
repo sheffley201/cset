@@ -18,13 +18,13 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   background-color: #EAEAEA;
 }
 
 nav a {
-  margin: 0 5px;
+  margin: 5px;
 }
 
 /* Basic text and border stuff */
@@ -99,8 +99,45 @@ a:active, a:visited:active {
   nav {
     display: flex;
     flex-direction: column;
+    margin-right: 10px;
   }
   nav a {
     margin: 10px 5px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .bottom {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .bottom section {
+    width: 45%;
+    margin: 10px 5px;
+    padding: 10px;
+    background-color: #ddd;
+    border: 1px solid black;
+  }
+
+  .about-me > section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 4px solid #e76f51;
+    padding-bottom: 5px;
+  }
+
+  #experience {
+    width: 100%;
+  }
+
+  .job, .job:last-of-type {
+    width: 30%;
+    margin: 5px;
+    padding: 5px;
+    background-color: #ddd;
+    border: 1px solid black;
   }
 }
